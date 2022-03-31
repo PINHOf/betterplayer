@@ -498,6 +498,8 @@ class BetterPlayerController extends ChangeNotifier {
 
   @override
   void dispose() {
+    if (!betterPlayerConfiguration.autoDispose) return;
+
     if (!_disposed) {
       _eventListeners.clear();
       videoPlayerController?.removeListener(_fullScreenListener);

@@ -17,6 +17,9 @@ class BetterPlayerConfiguration {
   /// Whether or not the video should loop
   final bool looping;
 
+  /// Default value is true
+  final bool autoDispose;
+
   /// Weather or not to show the controls when initializing the widget.
   final bool showControlsOnInitialize;
 
@@ -90,6 +93,7 @@ class BetterPlayerConfiguration {
     this.autoPlay = false,
     this.startAt,
     this.looping = false,
+    this.autoDispose = true,
     this.fullScreenByDefault = false,
     this.placeholder,
     this.showPlaceholderUntilPlay = false,
@@ -124,6 +128,7 @@ class BetterPlayerConfiguration {
     bool autoPlay,
     Duration startAt,
     bool looping,
+    bool autoDispose,
     bool fullScreenByDefault,
     Widget placeholder,
     Widget overlay,
@@ -148,6 +153,7 @@ class BetterPlayerConfiguration {
       autoPlay: autoPlay ?? this.autoPlay,
       startAt: startAt ?? this.startAt,
       looping: looping ?? this.looping,
+      autoDispose: autoDispose ?? this.autoDispose,
       fullScreenByDefault: fullScreenByDefault ?? this.fullScreenByDefault,
       placeholder: placeholder ?? this.placeholder,
       overlay: overlay ?? this.overlay,
